@@ -1,30 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// Example of page components
-import Home from './components/Home';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Navbar from './components/Navbar';
+import React from "react";
+import Contact from "./Components/Contact";
+import Home from "./Components/Home";
+import Navbar from "./Components/Navbar";
+import About from "./Components/About";
+import Experience from "./Components/Experience";
+import Portfolio from "./Components/Portfolio";
 
-
-
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Navbar /> {/* Display Navbar */}
-      
-      {/* Define routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div>
+      <Navbar />
+      <Home/>
+      <Experience />
+      <About />
+      <Portfolio />
+      <Contact />
+    </div>
   );
-};
+}
 
 export default App;
